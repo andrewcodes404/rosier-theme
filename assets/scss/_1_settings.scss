@@ -1,0 +1,90 @@
+/////////////////////////////////
+///****   settings.scss   ****///
+/////////////////////////////////
+
+$poloblue : #8CA2D3;
+/// rgba(140, 162, 211, 0.5)
+$pinky    : #F598A4;
+/// rgba(245, 152, 164, 0.5)
+$lavender   : #BCAFD6;
+/// rgba(188, 175, 214, 0.5)
+$mint       : #A4DAD2;
+/// rgba(164, 218, 210, 0.5)
+$ink            : #363f53;
+
+
+
+
+//////STOPS SAFARI INVENTING Horizontal Scroll
+html { overflow-x: hidden; }
+body { overflow-x: hidden; }
+
+$body-max-width : 1200px;
+
+///images
+img{
+	width:100%;
+	vertical-align: bottom; //stops that annoying 2px gap at the btm of imgs
+	height: auto;
+}
+
+
+///body font
+// $body-font : 'Playlist', sans-serif;
+// $body-line-height: 1.4;
+// $body-font-weight: 300;
+// ///header fonts
+// $header-font: 'Open Sans', sans-serif;
+// $header-font-weight: 200;
+// $header-line-height: 1.2;
+// $header-margin-bottom: 0.5rem;
+
+///Dont forget these are being converted to rems and then using the html px size to be responsive -> _typography.scss
+// $h1    :  60px;
+// $h2    :  35px;
+// $h3    :  30px;
+// $h4    :  20px;
+// $h5    :  18px;
+// $p     :  16px;
+// $small :  14px;
+
+///***************///
+///**Breakpoints**///
+///***************///
+
+$media-sml: 576px;
+$media-med: 769px;
+$media-lrg: 992px;
+$media-lrg-xl: 1200px;
+
+//Padding and margins
+$global-margin: 1rem;
+$global-padding: 1rem;
+
+$padding1  :  1rem;
+$padding2  :  2rem;
+$padding3  :  3rem;
+
+$margin1  :  1rem;
+$margin2  :  2rem;
+$margin3  :  3rem;
+
+//colors
+$primary : darkcyan;
+$secondary : silver;
+
+$links: black;
+$links-hover: $primary;
+$links-secondary: pink;
+$links-secondary-hover: orange;
+
+$background-color1 : $primary;
+$background-color2 : #f66100;
+$background-color3 : #854470;
+
+$columns-width: 225px;
+
+
+$lightgrey	: #d7d7d7;
+$grey				: #919191;
+$darkgrey		: #505050;

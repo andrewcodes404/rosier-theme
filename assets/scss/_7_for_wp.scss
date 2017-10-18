@@ -1,0 +1,157 @@
+///////////////////////////////////
+///****   for_wp.scss   ****///
+///////////////////////////////////
+
+.phpinfo{
+  background-color: green;
+  color: darkgoldenrod;
+  padding: 0 1rem;
+  display: none;
+}
+
+strong{
+  font-weight: 600;
+}
+
+.wp-caption-text, p.wp-caption-text {
+font-size: 14px;
+  color: grey;
+  font-style: italic;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+        white-space: nowrap;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+
+
+///***************///
+///**FOR WP**///
+///***************///
+//theres also a .wp-caption find it in -> typography.scss
+//want to check all the wp classes -> https://codex.wordpress.org/CSS
+
+.alignnone, a img.alignnone, .aligncenter, div.aligncenter, a img.aligncenter {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  // margin: auto;
+  height: auto;
+  padding: 0;
+}
+
+///images
+.alignleft, .alignright, a img.alignright{
+  @include media-zero{
+    float: none;
+    width: 100%;
+
+    height: auto;
+    padding:  0;
+  }
+
+  @include media-sml{
+    padding: 0  ;
+    width: 50%;
+    height: auto;
+  }
+}
+
+.alignleft, a img.alignleft {
+  @include media-sml{
+    float: left;
+    padding:0 1rem 0 0;
+  }
+}
+
+.alignright, a img.alignright {
+  @include media-sml{
+    float: right;
+    padding:0 0 0 1rem;
+  }
+}
+
+
+/////////////***************************////////////////
+/////////////////// Comments  //////////////////////
+/////////////***************************////////////////
+
+
+///Leave a reply
+
+.comments-area{
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 2px dashed $lightgrey;
+}
+
+.comment{
+  border: 1px dashed lightgrey;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  .comment-author{
+    img{
+      width: 100px;
+      display: block;
+    }
+  }
+
+  .comment-meta{
+    text-decoration: underline;
+    padding-bottom: 1rem;
+  }
+}
+
+
+// .comment-form-email,
+.comment-form-url {display:none;}
+
+.comment-form-comment{
+  
+}
+
+
+.comment-respond{
+  padding: 0.5rem;
+
+  .submit{
+    margin:1rem 0;
+    border: 1ps solid $lightgrey;
+    border-radius: 4px 0 4px 0;
+    background-color: $mint;
+    color: $ink;
+    box-shadow: none;
+    padding: 0.5rem;
+    transition: background-color .2s;
+
+    &:hover{
+      background-color: $pinky;
+    }
+  }
+
+}

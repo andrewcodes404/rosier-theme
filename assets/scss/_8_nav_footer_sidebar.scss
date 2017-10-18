@@ -1,0 +1,264 @@
+///****************///
+// NAV BAR AND LOGO//
+///****************///
+
+$nav-text-color : $ink;
+$nav-text-hover : $mint;
+.desktop-nav-cont{
+  position: relative;
+  height: 6rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 0.5rem;
+
+
+  @include media-med{
+    margin: 1rem auto 2rem;;
+  }
+}
+
+.rosier-cont, {
+  a, a:link, a:visited, a:active {
+      text-decoration: none;
+      color: $mint;
+     }
+  a:hover{color: $pinky;}
+
+}
+
+
+.rosier{
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  font-family: 'Playlist' , serif;
+  @include fontSize(60px);
+  transform: rotate(-20deg);
+  transform-origin: center;
+  transition: font-size .2s;
+
+  @include media-med{
+    @include fontSize(65px);
+  }
+
+  @include media-lrg{
+    @include fontSize(70px);
+  }
+
+}
+
+.strapline{
+  color: $nav-text-color;
+  position: absolute;
+  top: 4rem;
+  left: 5rem;
+
+  font-family: 'Playlist';
+  @include fontSize(20px);
+  transition: font-size .2s;
+
+  @include media-med{
+    @include fontSize(24px);
+    left: 6.5rem;
+  }
+
+  @include media-lrg{
+    @include fontSize(28px);
+    left: 6.5rem;
+  }
+}
+
+
+///DESKTOP
+
+.desktop-cont{
+
+
+  display: none;
+  @include media-med{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: .6rem;
+    padding-right: 1rem;
+    align-items: flex-end;
+    @include media-lrg{
+      padding-bottom: .25rem;
+    }
+
+
+    li{
+        padding-left: 0.75rem;
+        font-family: 'Playlist', serif;
+        @include fontSize(20px);
+        @include media-lrg{
+          @include fontSize(24px);
+        }
+
+        a, a:link, a:visited, a:active {
+            text-decoration: none;
+            color: $nav-text-color;
+           }
+        a:hover{color: $nav-text-hover;}
+      }
+  }
+}
+
+.desktop-social-icons{
+
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  .fa{
+      @include fontSize(24px);
+      padding-left: 0.25rem;
+  }
+
+}
+
+
+///DROP DOWN
+
+.menu-bars{
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  @include fontSize(28px);
+  @include media-med{
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.times{
+  z-index: 2;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  @include fontSize(28px);
+}
+
+.drop-down-cont{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 7rem;
+  background-color: rgba(140, 162, 211, 0.95);
+  text-align: center;
+  z-index: 1;
+
+  li{
+    font-family: 'Playlist' , serif;
+    @include fontSize(50px);
+    line-height: 1.4;
+
+  }
+
+  .drop-social-icons{
+    @include fontSize(24px);
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    justify-content: flex-end;
+      .fa{
+        padding-left: .5rem
+      }
+  }
+}
+
+
+//FOOTER
+
+footer{
+  position: relative;
+  min-height: 6rem;
+  padding: 2rem 1rem 3rem 0.5rem;
+  border-top: 1px solid lightgrey;
+
+  margin-top: 2rem;
+}
+
+.rosier-footer-cont{
+  a, a:link, a:visited, a:active {
+      text-decoration: none;
+      color: $ink;
+     }
+  a:hover{color: $mint;}
+}
+
+
+.rosier-footer{
+  position: absolute;
+  top: 2.5rem;
+  left: 1rem;
+
+  font-family: 'Playlist' , serif;
+  @include fontSize(30px);
+  transform: rotate(-20deg);
+  transform-origin: center;
+  // transition: font-size .2s;
+
+  @include media-med{
+    @include fontSize(35px);
+  }
+}
+
+.footer-social-icons{
+    position: absolute;
+    top: 6rem;
+    left: 1rem;
+    a, a:link, a:visited, a:active {
+        text-decoration: none;
+        color: $ink;
+       }
+    a:hover{color: $mint;}
+
+    .fa{
+
+        @include fontSize(18px);
+        padding-left: 0.25rem;
+
+        @include media-med{
+          @include fontSize(22px);
+        }
+    }
+}
+
+.footer-menu-cont{
+  text-align: right;
+  li{
+    @include fontSize(14px);
+    line-height: 1.2;
+  }
+  ///link to andrewcdoes404.com
+  #menu-item-255{
+    @include fontSize(12px);
+  }
+}
+
+
+
+///sidebar
+#any-name{
+  // background-color: $lightgrey;
+  border: 1px dotted $lightgrey;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: $grey;
+  li{
+    color: $grey;
+  }
+
+}
